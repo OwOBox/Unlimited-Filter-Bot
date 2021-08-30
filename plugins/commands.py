@@ -209,7 +209,7 @@ async def bot_status(client,message):
     )
 
 
-@trojanz.on_message(filters.command('start') & filters.private)
+@trojanz.on_message(filters.command('start1') & filters.private)
 async def start(client, message):
     await message.reply_text(
         text=Script.START_MSG.format(message.from_user.mention),
@@ -235,7 +235,7 @@ async def start(client, message):
             pass
 
 
-@trojanz.on_message(filters.command('help') & filters.private)
+@trojanz.on_message(filters.command('help1') & filters.private)
 async def help(client, message):
     await message.reply_text(
         text=Script.HELP_MSG,
@@ -243,12 +243,11 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("How to Deploy?", url="https://youtu.be/hkmc3e7U7R4"),
                     InlineKeyboardButton("About Me", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("BOT Channel", url="https://t.me/TroJanzHEX"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/TroJanzSupport")
+                    InlineKeyboardButton("BOT Channel", url="https://t.me/owogram"),
+                    InlineKeyboardButton("Support Group", url="https://t.me/owohub")
                 ]
             ]
         ),
@@ -265,7 +264,7 @@ async def about(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "SOURCE CODE", url="https://github.com/TroJanzHEX/Unlimited-Filter-Bot")
+                        "Tác giả", url="https://t.me/owohub")
                 ],
                 [
                     InlineKeyboardButton("BACK", callback_data="help_data"),
